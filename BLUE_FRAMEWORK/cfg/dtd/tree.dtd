@@ -1,0 +1,54 @@
+<!--
+/**
+ * Main framework page structure configuration file
+ *
+ * @category    BlueFramework
+ * @package     BlueFramework Core
+ * @author      Michał Adamiak    <chajr@bluetree.pl>
+ * @copyright   chajr/bluetree
+ * @version     1.0.1
+ */
+-->
+<!ELEMENT root (lib*, mod*, css*, js*, page*)>
+    <!ATTLIST root options (1|0) #REQUIRED>
+    <!ELEMENT lib (#PCDATA)>
+        <!ATTLIST lib on (1|0) #REQUIRED>
+
+    <!ELEMENT mod (#PCDATA)>
+        <!ATTLIST mod on (1|0) #REQUIRED>
+        <!ATTLIST mod param CDATA #IMPLIED>
+        <!ATTLIST mod exec CDATA #IMPLIED>
+        <!ATTLIST mod block CDATA #IMPLIED>
+
+    <!ELEMENT css (#PCDATA)>
+        <!ATTLIST css media CDATA #IMPLIED>
+        <!ATTLIST css external (0|1) #IMPLIED>
+
+    <!ELEMENT js (#PCDATA)>
+        <!ATTLIST js external (0|1) #IMPLIED>
+
+    <!ELEMENT page (menu*, sub*, lib*, mod*, css*, js*)>
+        <!ATTLIST page id ID #REQUIRED>
+        <!ATTLIST page layout CDATA #REQUIRED>
+        <!ATTLIST page external CDATA #IMPLIED>
+        <!ATTLIST page name CDATA #REQUIRED>
+        <!ATTLIST page options CDATA #REQUIRED>
+        <!ATTLIST page redirect CDATA #IMPLIED>
+        <!ATTLIST page startDate CDATA #IMPLIED>
+        <!ATTLIST page endDate CDATA #IMPLIED>
+        <!ATTLIST page changefreq CDATA #IMPLIED>
+        <!ATTLIST page priority CDATA #IMPLIED>
+
+    <!ELEMENT sub (menu*, sub*, lib*, mod*, css*, js*)>
+        <!ATTLIST sub id CDATA #REQUIRED>
+        <!ATTLIST sub layout CDATA #REQUIRED>
+        <!ATTLIST sub name CDATA #REQUIRED>
+        <!ATTLIST sub external CDATA #IMPLIED>
+        <!ATTLIST sub options CDATA #REQUIRED>
+        <!ATTLIST sub redirect CDATA #IMPLIED>
+        <!ATTLIST sub startDate CDATA #IMPLIED>
+        <!ATTLIST sub endDate CDATA #IMPLIED>
+        <!ATTLIST sub changefreq CDATA #IMPLIED>
+        <!ATTLIST sub priority CDATA #IMPLIED>
+
+    <!ELEMENT menu (#PCDATA)>

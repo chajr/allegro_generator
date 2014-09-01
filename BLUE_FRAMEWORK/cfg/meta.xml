@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+* Main framework mata structure configuration
+*
+* @category    BlueFramework
+* @package     BlueFramework Core
+* @author      Michał Adamiak    <chajr@bluetree.pl>
+* @copyright   chajr/bluetree
+* @version     1.0.0
+*/
+-->
+<!DOCTYPE root SYSTEM "dtd/meta.dtd">
+<root>
+    <default val="index">
+        <title title="{;lang;title;}" update="1"/>
+        <meta name="robots" content="index,follow,all" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="Generator aukcji allegro" />
+        <meta name="author" content="bluetree.pl powered by blueFramework 2.0" />
+    </default>
+</root>

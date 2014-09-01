@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* Framework page structure configuration
+*
+* @category    BlueFramework
+* @package     BlueFramework Core
+* @author      Michał Adamiak    <chajr@bluetree.pl>
+* @copyright   chajr/bluetree
+* @version     1.0.0
+*/
+-->
+<!DOCTYPE root SYSTEM 'dtd/tree.dtd'>
+<root options="1">
+    <mod on="1">benchmark</mod>
+    <css>bootstrap_dark</css>
+    <css>elusive-webfont</css>
+    <css>elusive-webfont-ie7</css>
+    <css>base</css>
+    <js external="1">//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js</js>
+    <js>bootstrap</js>
+    <js>bootstrap_dropdown_hover</js>
+    <js>bootstrap_extend</js>
+
+    <page id="index" name="Allegro generator" layout="index" options="1111" changefreq="always" priority="0.8">
+        
+    </page>
+
+    <page id="error404" name="{;lang;core;page_not_found;}" layout="404" options="1001">
+        <mod on="1" param="breadcrumbs">main</mod>
+        <css>styles</css>
+    </page>
+</root>
