@@ -13,7 +13,7 @@
 <!DOCTYPE root SYSTEM "dtd/meta.dtd">
 <root>
     <default val="index">
-        <title title="{;lang;title;}" update="1"/>
+        <title title="Allegro generator" update="1"/>
         <meta name="robots" content="index,follow,all" />
         <meta name="keywords" content="" />
         <meta name="description" content="Generator aukcji allegro" />

@@ -7,7 +7,7 @@
 * @package     BlueFramework Core
 * @author      Michał Adamiak    <chajr@bluetree.pl>
 * @copyright   chajr/bluetree
-* @version     1.0.0
+* @version     1.1.0
 */
 -->
 <!DOCTYPE root SYSTEM 'dtd/tree.dtd'>
@@ -23,7 +23,7 @@
     <js>bootstrap_extend</js>
 
     <page id="index" name="Allegro generator" layout="index" options="1111" changefreq="always" priority="0.8">
-        
+        <mod on="1" block="main_content">allegro_generator</mod>
     </page>
 
     <page id="error404" name="{;lang;core;page_not_found;}" layout="404" options="1001">
