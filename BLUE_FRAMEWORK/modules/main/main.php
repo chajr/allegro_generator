@@ -16,11 +16,18 @@ class main extends module_class
     public $requireModules      = [];
 
     /**
+     * information that use is logged in
+     *
+     * @var bool
+     */
+    protected $_verification;
+
+    /**
      * running module method
      */
     public function run()
     {
-        
+        $this->_verification = log_class::verifyUser();
     }
 
     public function runErrorMode(){}

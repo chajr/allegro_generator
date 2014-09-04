@@ -7,15 +7,16 @@
  * @subpackage  login
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     0.1.0
+ * @version     0.2.0
  */
 
 class login extends module_class
 {
     public $required_libs       = array('log_class');
-    public $required_modules    = array('connection');
+    public $required_modules    = array();
 
     const USER_PASS = '';
+    const USER_NAME = 'test';
 
     /**
      * lunch module
@@ -55,11 +56,11 @@ class login extends module_class
      */
     protected function _checkLoginData()
     {
-        if ($this->post->password) {
+        if ($this->post->password && $this->post->username) {
             $this->_checkUser();
         } else {
             $this->_showLoginForm();
-            $this->error('critic', '', 'Musisz podać hasło');
+            $this->error('critic', '', 'Musisz podać login i hasło');
         }
     }
 
@@ -90,13 +91,14 @@ class login extends module_class
      */
     protected function _checkUser()
     {
+        $username = $this->post->username;
         $hashPass = hash('sha256', $this->post->password);
 
-        if (self::USER_PASS === $hashPass) {
+        if (self::USER_PASS === $hashPass && self::USER_NAME === $username) {
             log_class::logOn(1, 1, 1);
         } else {
             $this->_showLoginForm();
-            $this->error('critic', '', 'Nieprawidłowe hasło');
+            $this->error('critic', '', 'Nieprawidłowe hasło lub nazwa użytkownika');
         }
     }
 
