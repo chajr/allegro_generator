@@ -7,16 +7,13 @@
  * @subpackage  login
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     0.2.0
+ * @version     0.3.0
  */
 
 class login extends module_class
 {
     public $required_libs       = array('log_class');
     public $required_modules    = array();
-
-    const USER_PASS = '';
-    const USER_NAME = 'test';
 
     /**
      * lunch module
@@ -29,6 +26,7 @@ class login extends module_class
         if ($this->get->logout === 'true') {
             log_class::logOff();
             $this->session->set('logout', true);
+            $this->session->setSession();
             header('Location: /');
             exit;
         }
@@ -91,11 +89,13 @@ class login extends module_class
      */
     protected function _checkUser()
     {
+        $userList = require_once (starter_class::path('/cfg') . 'user_list.php');
         $username = $this->post->username;
         $hashPass = hash('sha256', $this->post->password);
 
-        if (self::USER_PASS === $hashPass && self::USER_NAME === $username) {
-            log_class::logOn(1, 1, 1);
+        if (isset($userList[$username]) && $userList[$username]['password'] === $hashPass) {
+            log_class::logOn($userList[$username]['user_id'], 1, 1);
+            $this->error('ok', '', 'Udało ci sięzalogować do systemu');
         } else {
             $this->_showLoginForm();
             $this->error('critic', '', 'Nieprawidłowe hasło lub nazwa użytkownika');

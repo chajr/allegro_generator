@@ -5,7 +5,7 @@
  * @subpackage  error
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     2.4.6
+ * @version     2.4.7
  */
 
 /**
@@ -596,7 +596,7 @@ final class error_class
 
                             if (!$bool) {
                                 @trigger_error(
-                                    'No default lang pack<br/><br/>' . $mod
+                                    'No default lang pack: ' . $mod
                                 );
                             }
 

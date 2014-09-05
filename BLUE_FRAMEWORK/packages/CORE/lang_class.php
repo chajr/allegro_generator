@@ -181,7 +181,7 @@ class lang_class
                 $lang = $this->loadLanguage($path . $mod);
             }
 
-            if (!$lang) {
+            if ($lang === false) {
                 if ($type) {
                     return FALSE;
                 } else {
@@ -403,7 +403,7 @@ class lang_class
             'content'
         );
 
-        if (!$bool) {
+        if ($bool === false) {
             $bool = $this->_similar($path);
             if (!$bool) {
                 $bool = starter_class::load(

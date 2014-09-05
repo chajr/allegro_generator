@@ -14,21 +14,30 @@
 <root options="1">
     <lib on="1">user</lib>
     <mod on="1">benchmark</mod>
+
     <css>bootstrap_dark</css>
     <css>elusive-webfont</css>
     <css>elusive-webfont-ie7</css>
     <css>base</css>
+
     <js external="1">//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js</js>
     <js>bootstrap</js>
     <js>bootstrap_dropdown_hover</js>
     <js>bootstrap_extend</js>
 
     <page id="index" name="Allegro generator" layout="index" options="1111" changefreq="always" priority="0.8">
+        <sub id="render" layout="index" name="Szablon" options="11110">
+            <lib on="1">user</lib>
+            <mod on="1">benchmark</mod>
+            <mod on="1" block="main_content">login</mod>
+            <mod on="1" block="main_content">allegro_generator</mod>
+        </sub>
+
         <mod on="1" block="main_content">login</mod>
         <mod on="1" block="main_content">allegro_generator</mod>
     </page>
 
-    <page id="error404" name="{;lang;core;page_not_found;}" layout="404" options="1001">
+    <page id="error404" name="Strona nie znaleziona" layout="404" options="1001">
         <mod on="1" param="breadcrumbs">main</mod>
         <css>styles</css>
     </page>
