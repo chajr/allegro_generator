@@ -1,0 +1,60 @@
+<div id="add_form" class="panel panel-default">
+    <div class="panel-heading">Dane do szablonu</div>
+    <form action="{;core;mainpath;}index/render" method="post" role="form">
+        <div class="form-group pull-left">
+            <label for="name">Nazwa aukcji:</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="icon-user"></i>
+                </div>
+                <input class="form-control"
+                       type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Nazwa aukcji"/>
+            </div>
+        </div>
+
+        <div class="form-group pull-right">
+            <label for="cell_phone">Telefon komórkowy:</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="icon-user"></i>
+                </div>
+                <input class="form-control"
+                       type="text"
+                       id="cell_phone"
+                       name="cell_phone"
+                       placeholder="Telefon komórkowy"/>
+            </div>
+        </div>
+
+        <div class="form-group pull-left">
+            <label for="phone">Telefon stacjonarny:</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="icon-user"></i>
+                </div>
+                <input class="form-control"
+                       type="text"
+                       id="phone"
+                       name="phone"
+                       placeholder="Telefon stacjonarny"/>
+            </div>
+        </div>
+
+        <div class="form-group center-block">
+            <label for="description">Opis aukcji:</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="icon-user"></i>
+                </div>
+                <textarea id="description" name="description" class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generuj</button>
+        <p class="clear"></p>
+    </form>
+    <div class="clear"></div>
+</div>

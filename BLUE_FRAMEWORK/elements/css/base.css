@@ -1,13 +1,29 @@
 body {
     padding: 10px;
+    color: #aaa;
 }
 section#content, #header_aside{
     padding: 10px;
+}
+nav{
+    margin: 5px auto;
+    width:90%;
 }
 #login_form{
     margin: 25px auto;
     width:350px;
 }
-#login_form form{
+#login_form form, #add_form form{
     padding: 10px;
+}
+#add_form{
+    margin: 25px auto;
+    width:90%;
+}
+#add_form .form-group{
+    width: 46%;
+    margin: 5px 2%;
+}
+.form-control{
+    color: #999;
 }
