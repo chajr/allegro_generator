@@ -7,7 +7,7 @@
  * @subpackage  generator
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     0.3.0
+ * @version     0.4.0
  */
 class allegro_generator extends module_class
 {
@@ -31,6 +31,8 @@ class allegro_generator extends module_class
         $this->_verification = log_class::verifyUser();
 
         if ($this->_verification) {
+            $this->set('generator', 'js');
+            $this->set('base', 'css');
             $this->layout('index');
             $this->_showUserAddForm();
         }

@@ -7,7 +7,7 @@
 * @package     BlueFramework Core
 * @author      Michał Adamiak    <chajr@bluetree.pl>
 * @copyright   chajr/bluetree
-* @version     1.2.0
+* @version     1.3.0
 */
 -->
 <!DOCTYPE root SYSTEM 'dtd/tree.dtd'>
@@ -20,7 +20,7 @@
     <css>elusive-webfont-ie7</css>
     <css>base</css>
 
-    <js external="1">//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js</js>
+    <js>jQuery-2</js>
     <js>bootstrap</js>
     <js>bootstrap_dropdown_hover</js>
     <js>bootstrap_extend</js>
@@ -33,8 +33,17 @@
             <mod on="1" block="main_content">allegro_generator</mod>
         </sub>
 
+        <sub id="upload" layout="empty" name="Upload" options="11111">
+            <lib on="1">user</lib>
+            <mod on="1">benchmark</mod>
+            <mod on="1" block="main_content">allegro_generator</mod>
+        </sub>
+
         <mod on="1" block="main_content">login</mod>
         <mod on="1" block="main_content">allegro_generator</mod>
+
+        <css>dropzone</css>
+        <js>dropzone</js>
     </page>
 
     <page id="error404" name="Strona nie znaleziona" layout="404" options="1001">

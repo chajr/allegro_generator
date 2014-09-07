@@ -1,0 +1,35 @@
+#add_form{
+    margin: 25px auto;
+    width:90%;
+}
+#add_form .form-group{
+    width: 46%;
+    margin: 5px 2%;
+}
+.form-control{
+    color: #999;
+}
+#dropzoneForm{
+    width: 80%;
+    margin: 20px auto;
+    cursor: cell;
+}
+#dropzoneForm div{
+    cursor: cell;
+}
+#dropzoneForm .dz-filename span, #dropzoneForm .dz-error-message span{
+    font-size: 12px;
+}
+#dropzoneForm span{
+    font-size: 25px;
+    text-align: center;
+    content: 'Przesuń pliki tutaj aby załadować na serwer';
+}
+.dropzone{
+    border: 2px dashed #ccc;
+    background-color: #333;
+}
+#generate{
+    margin: 20px auto;
+    display: block;
+}
