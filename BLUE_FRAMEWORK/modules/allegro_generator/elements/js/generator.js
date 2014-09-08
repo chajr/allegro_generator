@@ -1,5 +1,6 @@
 Dropzone.options.dropzoneForm = {
     addRemoveLinks: true,
+    acceptedFiles: 'image/*',
     maxFilesize: 5
 };
 $('#clear_form').click(function()

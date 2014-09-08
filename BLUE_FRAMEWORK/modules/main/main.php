@@ -8,7 +8,7 @@
  * @subpackage  main
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     1.0.0
+ * @version     1.1.0
  */
 class main extends module_class
 {
@@ -27,6 +27,7 @@ class main extends module_class
      */
     public function run()
     {
+        log_class::setSessionModel($this->session);
         $this->_verification = log_class::verifyUser();
     }
 

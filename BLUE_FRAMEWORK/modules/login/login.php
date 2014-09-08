@@ -7,7 +7,7 @@
  * @subpackage  login
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     0.3.0
+ * @version     0.4.0
  */
 
 class login extends module_class
@@ -20,8 +20,6 @@ class login extends module_class
      */
     public function run()
     {
-        log_class::setSessionModel($this->session);
-
         $this->_logoutInfo();
         if ($this->get->logout === 'true') {
             log_class::logOff();

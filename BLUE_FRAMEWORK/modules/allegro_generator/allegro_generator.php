@@ -7,7 +7,7 @@
  * @subpackage  generator
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     0.4.0
+ * @version     0.5.0
  */
 class allegro_generator extends module_class
 {
@@ -29,13 +29,35 @@ class allegro_generator extends module_class
     public function run()
     {
         $this->_verification = log_class::verifyUser();
-
         if ($this->_verification) {
-            $this->set('generator', 'js');
-            $this->set('base', 'css');
-            $this->layout('index');
-            $this->_showUserAddForm();
+            switch ($this->params[0]) {
+                case 'upload':
+                    $this->_handleUpload();
+                    break;
+                case 'form':
+                    $this->_handleFormDisplay();
+                    break;
+            }
         }
+    }
+
+    /**
+     * handle all uploading files
+     */
+    protected function _handleUpload()
+    {
+        
+    }
+
+    /**
+     * show user add form
+     */
+    protected function _handleFormDisplay()
+    {
+        $this->set('generator', 'js');
+        $this->set('base', 'css');
+        $this->layout('index');
+        $this->_showUserAddForm();
     }
 
     /**
@@ -46,8 +68,9 @@ class allegro_generator extends module_class
         $userId      = $this->_getUserId();
         $path        = self::TEMPLATE_DIR . $userId . '/add_form.html';
         $independent = new display_class([
-            'independent' => true,
-            'template'    => $path
+            'independent'   => true,
+            'get'           => $this->get,
+            'template'      => $path
         ]);
 
         $this->generate('user_template', $independent->render());
