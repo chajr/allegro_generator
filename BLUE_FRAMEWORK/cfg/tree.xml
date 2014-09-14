@@ -7,7 +7,7 @@
 * @package     BlueFramework Core
 * @author      Michał Adamiak    <chajr@bluetree.pl>
 * @copyright   chajr/bluetree
-* @version     1.5.0
+* @version     1.6.0
 */
 -->
 <!DOCTYPE root SYSTEM 'dtd/tree.dtd'>
@@ -33,13 +33,6 @@
             <mod on="1">main</mod>
             <mod on="1" block="main_content">login</mod>
             <mod on="1" block="main_content" param="generate">allegro_generator</mod>
-        </sub>
-
-        <sub id="upload" layout="empty" name="Upload" options="11110">
-            <lib on="1">user</lib>
-            <mod on="1">benchmark</mod>
-            <mod on="1">main</mod>
-            <mod on="1" block="main_content" param="upload">allegro_generator</mod>
         </sub>
 
         <mod on="1" block="main_content">login</mod>
