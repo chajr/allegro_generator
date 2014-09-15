@@ -7,7 +7,7 @@
  * @subpackage  generator
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     0.5.0
+ * @version     0.6.0
  */
 class allegro_generator extends module_class
 {
@@ -38,6 +38,13 @@ class allegro_generator extends module_class
                     $this->_handleFormDisplay();
                     break;
             }
+        } else {
+            if ($this->params[0] === 'upload') {
+                $this->generate('empty', json_encode([
+                    'status'    => 'false',
+                    'message'   => 'Access denied'
+                ]), true);
+            }
         }
     }
 
@@ -46,7 +53,36 @@ class allegro_generator extends module_class
      */
     protected function _handleUpload()
     {
-        
+//        var_dump($this->files->file);
+        $uid        = $this->_getUserId();
+        $dir        = starter_class::path(true) . '/images/' . $uid;
+        $response   = [
+            'status'    => 'false',
+            'message'   => ''
+        ];
+
+        if ($this->files->uploadErrors) {
+            $response['message'] = $this->files->uploadErrors['file'];
+            $this->generate('empty', json_encode($response), true);
+            return;
+        }
+
+        if (!file_exists($dir)) {
+            $bool = disc_class::mkdir($dir);
+            @chmod($dir, 0777);
+
+            if (!$bool) {
+                $response['message'] = 'Cannot create image directory';
+                $this->generate('empty', json_encode($response), true);
+                return;
+            }
+        }
+
+//        $fileName = time() . '.' . $this->files->file['extension'];
+//        $this->files->move($dir, 'file');
+//        $response['status'] = 'success';
+
+        $this->generate('empty', json_encode($response), true);
     }
 
     /**

@@ -7,10 +7,9 @@
  * @subpackage  file
  * @author      Michał Adamiak    <chajr@bluetree.pl>
  * @copyright   chajr/bluetree
- * @version     0.5.0
+ * @version     0.5.1
  */
-class file_class 
-    extends folder_class
+class file_class
 {
     /**
      * contains error information
