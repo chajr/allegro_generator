@@ -1,2 +1,8 @@
 .idea
 /images
+/vendor
+composer.lock
+app/chache
+!app/chache/.gitkeap
+app/logs
+!app/logs/.gitkeap
