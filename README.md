@@ -3,5 +3,4 @@ allegro_generator
 
 generate allegro auction html
 
-powered by Blue Framework 2:
-[framework](https://github.com/chajr/bluetree20)
+powered by Symfony 2 [framework](http://symfony.com/)
