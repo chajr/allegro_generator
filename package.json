@@ -1,0 +1,7 @@
+{
+  "name": "allegro generator",
+  "devDependencies": {
+    "gulp": "0.6.*",
+    "semantic-ui": "2.1.*"
+  }
+}
