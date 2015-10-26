@@ -5,7 +5,7 @@
   "description": "Application allow to generate multiple allegro templates",
   "keywords": ["allegro", "aukcja", "generator", "aukcje internetowe", "szablony allegro"],
   "homepage": "https://github.com/chajr/allegro_generator",
-  "version": "0.1.0",
+  "version": "0.1.0.3",
   "authors": [
     {
       "name": "Michał Adamiak",
@@ -16,7 +16,9 @@
   ],
   "require": {
     "php": ">=5.5.0",
-    "slim/slim": "2.6.*"
+    "slim/slim": "2.6.*",
+    "twig/twig": "~1.0",
+    "gregwar/image": "2.0.*"
   },
   "autoload": {
     "psr-4": {
