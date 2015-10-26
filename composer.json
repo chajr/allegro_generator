@@ -1,0 +1,26 @@
+{
+  "name": "chajr/allegro_generator",
+  "type": "application",
+  "license": "MIT",
+  "description": "Application allow to generate multiple allegro templates",
+  "keywords": ["allegro", "aukcja", "generator", "aukcje internetowe", "szablony allegro"],
+  "homepage": "https://github.com/chajr/allegro_generator",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Michał Adamiak",
+      "email": "chajr@bluetree.pl",
+      "homepage": "https://github.com/chajr",
+      "role": "Project Manager"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "slim/slim": "2.6.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Generator": "app/"
+    }
+  }
+}

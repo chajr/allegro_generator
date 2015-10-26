@@ -1,2 +1,8 @@
 .idea
-/images
+www/images/
+!www/images/.gitignore
+templates/
+!templates/.gitignore
+www/fotos/
+!www/fotos/.gitignore
+vendor/
