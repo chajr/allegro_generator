@@ -6,3 +6,4 @@ templates/
 www/fotos/
 !www/fotos/.gitignore
 vendor/
+composer.lock
