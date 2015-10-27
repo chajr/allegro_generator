@@ -3,6 +3,10 @@
     
   },
   "routes": {
-    
+    "main_page": {
+      "route": "/",
+      "method": "get",
+      "module": "Generator\\Mod\\MainPage"
+    }
   }
 }
