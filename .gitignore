@@ -7,3 +7,4 @@ www/fotos/
 !www/fotos/.gitignore
 vendor/
 composer.lock
+tmp/

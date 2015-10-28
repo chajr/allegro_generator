@@ -22,7 +22,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Generator\\": "app/"
+      "Generator\\": "app/",
+      "Test\\": "tests/"
     }
   }
 }
