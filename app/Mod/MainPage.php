@@ -8,6 +8,6 @@ class MainPage extends Base
 {
     public function execute(Slim $app)
     {
-        echo 'yupi';
+        return 'yupi';
     }
 }

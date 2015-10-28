@@ -16,7 +16,10 @@ try {
                 /** @var Generator\Mod\Base $mod */
                 $mod = new $name;
 
-                $mod->execute($app);
+                $response = $mod->execute($app);
+
+                $app->response->setStatus(200);
+                $app->response->setBody($response);
             }
         );
     }
