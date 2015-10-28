@@ -1,0 +1,7 @@
+{
+  "name": "allegro_generator",
+  "dependencies": {
+    "lodash": "3.10.*",
+    "jquery": "2.1.*"
+  }
+}
