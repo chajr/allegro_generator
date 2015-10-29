@@ -8,6 +8,12 @@ class MainPage extends Base
 {
     public function execute(Slim $app)
     {
-        return 'yupi';
+        $loader = new \Twig_Loader_Filesystem('../app/templates');
+        $twig = new \Twig_Environment($loader, array(
+            'cache' => '../../var/cache',
+        ));
+        $template = $twig->loadTemplate('main_container.html');
+
+        return $template->render(['some_var' => 'yupi template']);
     }
 }
