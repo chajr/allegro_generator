@@ -1,7 +1,7 @@
 {
-  "name": "allegro generator",
+  "name": "allegro_generator",
   "devDependencies": {
-    "gulp": "0.6.*",
+    "gulp": "3.9.*",
     "semantic-ui": "2.1.*",
     "bower": "1.6.*"
   }

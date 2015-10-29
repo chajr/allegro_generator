@@ -5,6 +5,7 @@ echo "Begin Allegro Generator installation for environment: ";
 echo "$ENV";
 
 npm install;
+bower install;
 
 if [ "$ENV" == "prod" ]; then
     composer install --no-dev --optimize-autoloader --prefer-dist;
