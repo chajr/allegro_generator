@@ -2,9 +2,16 @@
 www/images/
 !www/images/.gitignore
 templates/
+!app/templates/
 !templates/.gitignore
 www/fotos/
 !www/fotos/.gitignore
+var/cache/
+!var/cache/.gitignore
 vendor/
 composer.lock
 tmp/
+npm-debug.log
+bower_components/
+node_modules/
+www/assets/
