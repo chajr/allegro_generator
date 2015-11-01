@@ -2,6 +2,12 @@
   "generators": {
     
   },
+  "app": {
+    "cache": {
+      "enabled": true,
+      "dir": "../var/cache"
+    }
+  },
   "routes": {
     "main_page": {
       "route": "/",
