@@ -12,7 +12,7 @@ npm install;
 node_modules/bower/bin/bower install --config.analytics=false;
 
 if [ "$ENV" == "prod" ]; then
-#    node node_modules/gulp/bin/gulp.js build;
+    node node_modules/gulp/bin/gulp.js build;
     composer install --no-dev --optimize-autoloader --prefer-dist;
 else
     node node_modules/gulp/bin/gulp.js build-$ENV;
