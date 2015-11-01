@@ -10,10 +10,10 @@ class MainPage extends Base
     {
         $loader = new \Twig_Loader_Filesystem('../app/templates');
         $twig = new \Twig_Environment($loader, array(
-            'cache' => '../../var/cache',
+            'cache' => '../var/cache',
         ));
         $template = $twig->loadTemplate('main_container.html');
 
-        return $template->render(['some_var' => 'yupi template']);
+        return $template->render(['some_var' => 'template']);
     }
 }
