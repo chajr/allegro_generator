@@ -6,6 +6,7 @@ echo "$ENV";
 
 npm install;
 bower install;
+gulp build
 
 if [ "$ENV" == "prod" ]; then
     composer install --no-dev --optimize-autoloader --prefer-dist;

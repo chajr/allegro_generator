@@ -2,6 +2,7 @@
   "name": "allegro_generator",
   "dependencies": {
     "lodash": "3.10.*",
-    "jquery": "2.1.*"
+    "jquery": "2.1.*",
+    "semantic-ui": "2.1.*"
   }
 }

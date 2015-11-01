@@ -2,7 +2,7 @@
   "name": "allegro_generator",
   "devDependencies": {
     "gulp": "3.9.*",
-    "semantic-ui": "2.1.*",
-    "bower": "1.6.*"
+    "bower": "1.6.*",
+    "gulp-copy": "0.0.*"
   }
 }
