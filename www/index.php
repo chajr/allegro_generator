@@ -14,9 +14,9 @@ try {
                 $name = '\\' . $route['module'];
 
                 /** @var Generator\Mod\Base $mod */
-                $mod = new $name;
+                $mod = new $name($app);
 
-                $response = $mod->execute($app);
+                $response = $mod->execute();
 
                 $app->response->setStatus(200);
                 $app->response->setBody($response);
