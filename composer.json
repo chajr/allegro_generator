@@ -20,7 +20,8 @@
     "twig/twig": "~1.0",
     "gregwar/image": "2.0.*",
     "symfony/form": "2.7.*",
-    "symfony/security": "2.7.*"
+    "symfony/security": "2.7.*",
+    "symfony/twig-bridge": "2.7.*"
   },
   "autoload": {
     "psr-4": {

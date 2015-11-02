@@ -13,6 +13,11 @@
       "route": "/",
       "method": "get",
       "module": "Generator\\Mod\\MainPage"
+    },
+    "login": {
+      "route": "/login",
+      "method": "get",
+      "module": "Generator\\Mod\\Login"
     }
   }
 }
