@@ -1,10 +1,20 @@
 <?php
 require_once '../vendor/autoload.php';
 
+$envConfig = [];
+
+if (isset($_SERVER['HTTP_ENVIRONMENT_MOD'])) {
+    $environment = $_SERVER['HTTP_ENVIRONMENT_MOD'];
+    $envConfig = json_decode(
+        file_get_contents('../app/config/config_' . $environment . '.json'),
+        true
+    );
+}
+
 $app    = new \Slim\Slim();
 $config = json_decode(file_get_contents('../app/config/config.json'), true);
 
-$app->config($config);
+$app->config($config + $envConfig);
 
 try {
     foreach ($app->config('routes') as $route) {

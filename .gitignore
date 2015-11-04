@@ -16,3 +16,4 @@ bower_components/
 node_modules/
 www/assets/
 semantic/
+app/config/config_local.json

@@ -1,0 +1,8 @@
+{
+  "app": {
+    "cache": {
+      "enabled": false,
+      "dir": "../var/cache"
+    }
+  }
+}
